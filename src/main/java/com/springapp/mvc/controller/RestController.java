@@ -35,4 +35,11 @@ public class RestController
     {
         return productService.findById(id);
     }
+
+    @RequestMapping(value = "/product", method = RequestMethod.GET)
+    @ResponseBody
+    public Product getProduct()
+    {
+        return productService.findById(6);
+    }
 }
